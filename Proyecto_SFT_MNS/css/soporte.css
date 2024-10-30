@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #1e7e34;
+    color: #fff;
+    padding: 20px 0;
+    height: 234px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.search-bar {
+    display: flex;
+    height: 40px;
+    
+
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #ffc107;
+    border: none;
+    cursor: pointer;
+}
+
+.user-options a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+
+.move-car{
+    position: relative;
+    margin-left: auto;
+    transform: translate(1550%, -45%);
+    flex-wrap: wrap;
+}
+
+.user-options{
+    position: relative;
+    right: 2%;
+    top: 200%;
+}
+
+.move-usuario{
+    position: relative;
+    margin-left: 80%;
+    top: -95%;
+    flex-wrap: wrap;
+
+}
+.move-sesion{
+    position: relative;
+    transform: translate(-15%, 180%);
+}
+
+.Center{
+    text-align: center;
+}
+
+
+
+main .container {
+    padding: 20px 0;
+}
+
+
+
+table {
+    width: 90%;
+    margin: 0 auto 20px;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #1e7e34;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table a {
+    color: #1e7e34;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    background-color: #28a745;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.support-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+.support-form, .support-list {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+h2 {
+    margin-bottom: 20px;
+}
+form label {
+    display: block;
+    margin-top: 10px;
+}
+form select, form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block; /* Asegura que los campos estén uno debajo del otro */
+}
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.view-request-button {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.view-request-button:hover {
+    background-color: #218838;
+}
+.details-container {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.details-container.active {
+    display: block;
+}

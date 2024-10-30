@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Elementos</title>
+    <link rel="stylesheet" href="CSS/crud.css">
+</head>
+<body>
+    <header>
+        <div class="admin-header">
+            <div class="admin-logo">
+                <img src="imagenes/usuario.png" alt="User Logo" width="50" height="50">
+            </div>
+            <div class="admin-name">
+                <h2>Administrador</h2>
+            </div>
+            <button class="menu-button" onclick="toggleSidebar()">☰</button>
+        </div>
+    </header>
+    
+    <div class="sidebar" id="sidebar">
+        <a href="pag_principal.html">Inicio</a>
+        <a href="#users">Usuarios</a>
+        <a href="#products">Productos</a>
+        <a href="#orders">Pedidos</a>
+        <a href="#reviews">Reseñas</a>
+        <a href="#categories">Categorías</a>
+    </div>
+
+    <main>
+        <div class="crud-container">
+            <h1>Gestión de Elementos</h1>
+            <table class="crud-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="crud-table-body">
+                    <tr>
+                        <td>1</td>
+                        <td>Elemento 1</td>
+                        <td>
+                            <button onclick="editElement(1)">Editar</button>
+                            <button onclick="deleteElement(1)">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Elemento 2</td>
+                        <td>
+                            <button onclick="editElement(2)">Editar</button>
+                            <button onclick="deleteElement(2)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="crud-actions">
+                <button onclick="addElement()">Agregar Elemento</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="JS/crud.js"></script>
+</body>
+</html>

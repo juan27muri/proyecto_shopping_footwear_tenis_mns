@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Login</title>
+</head>
+<body>
+<div class="container" id="container">
+    <div class="form-container sign-up">
+        <form>
+            <h1>Registrate</h1>
+            <input type="number" placeholder="Numero de Identificación">
+            <input type="text" placeholder="nombre">
+            <input type="text" placeholder="Apellido">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Direccion"> 
+            <select>
+                <option value="" disabled selected>ㅤㅤㅤSelecciona tu departametoㅤㅤㅤ</option>
+                <option value="Tolima">Tolima</option>
+                <option value="Quindio">Quindio</option>
+                <option value="meta">Meta</option>
+                <option value="Antioquia">Antioquia</option>
+            </select> <br>
+            <select>
+                <option value="" disabled selected>ㅤㅤㅤㅤㅤSelecciona tu Ciudadㅤㅤㅤㅤㅤ</option>
+                <option value="Ibague">Ibague</option>
+                <option value="Bogota">Bogota</option>
+                <option value="Medellin">Medellin</option>
+                <option value="Armenia">Armenia</option>
+            </select>
+
+            <input type="number" placeholder="Telefono">
+            <input type="password" placeholder="contraseña">
+            <input type="password" placeholder="Confir  mar contraseña">
+            <button>Registrarse</button>
+        </form>
+    </div>
+    <div class="form-container sign-in">
+        <form>
+            <h1>Bienvenido</h1>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="contraseña">
+            <button>Inicio sesion</button>
+            <a href="">Iniciar Sesion como Administrador</a>
+        </form>
+    </div>
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-panel toggle-left">
+                <h1>Registrate!</h1>
+                Una vez Registrado podras iniciar Sesion
+                <button class="hidden" id="login">Iniciar sesion</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h1>Hola, amigo!</h1>
+                Este apartado es para poder hacer la creacion de tu cuenta
+                <button class="hidden" id="register">Registrarse</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="JS/script.js"></script>
+</body>
+</html>

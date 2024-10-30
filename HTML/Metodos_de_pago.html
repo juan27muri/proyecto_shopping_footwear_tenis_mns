@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de Pago</title>
+    <link rel="stylesheet" href="CSS/pagos.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Shopping Footwear Tenis MNS</h1>
+                <div class="user-options">
+                    <a href="pag_principal.html">Inicio</a>
+                    <a href="Carrito.html">Carrito</a>
+                    <a href="mi_cuenta.html">Mi cuenta</a>
+                </div>
+            </div> <br>
+        </div>
+    </header>
+    
+    <main>
+        <section class="payment-section">
+            <h1>Métodos de Pago</h1>
+            <div class="payment-options">
+                <div class="payment-images">
+                    <img src="imagenes/efecty.png" alt="Efectivo" width="300px" height="200px" class="payment-image" onclick="showForm('efectivo')">
+                    <img src="imagenes/nequi.png" alt="Nequi" width="300px" height="200px" class="payment-image" onclick="showForm('nequi')">
+                </div>
+                <div class="payment-form-container">
+                    <div id="efectivo-form" class="payment-form" style="display: none;">
+                        <h2>Efectivo</h2>
+                        <form>
+                            <label for="efectivo-name">Nombre:</label>
+                            <input type="text" id="efectivo-name" name="efectivo-name" required>
+                            <label for="efectivo-phone">Teléfono:</label>
+                            <input type="text" id="efectivo-phone" name="efectivo-phone" required>
+                            <button type="submit">Añadir Efectivo</button>
+                        </form>
+                    </div>
+
+                    <div id="nequi-form" class="payment-form" s tyle="display: none;">
+                        <h2>Nequi</h2>
+                        <form>
+                            <label for="nequi-name">Nombre:</label>
+                            <input type="text" id="nequi-name" name="nequi-name" required>
+                            <label for="nequi-phone">Teléfono:</label>
+                            <input type="text" id="nequi-phone" name="nequi-phone" required>
+                            <label for="nequi-account">Cuenta Nequi:</label>
+                            <input type="text" id="nequi-account" name="nequi-account" required>
+                            <button type="submit">Añadir Nequi</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Shopping Footwear Tenis MNS. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="JS/pagos.js"></script>
+</body>
+</html>

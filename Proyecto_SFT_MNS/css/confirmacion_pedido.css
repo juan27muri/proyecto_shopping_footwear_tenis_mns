@@ -1,0 +1,110 @@
+/* Estilo base para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los encabezados */
+h1 {
+    text-align: center;
+    color: #1e7e34;
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #1e7e34;
+    padding-bottom: 10px;
+    color: #1e7e34;
+    margin-top: 20px;
+}
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: #1e7e34;
+    color: white;
+}
+
+tfoot {
+    font-weight: bold;
+    background-color: #f4f4f4;
+}
+
+tfoot td {
+    border-top: 2px solid #1e7e34;
+}
+
+/* Estilo para los párrafos y enlaces */
+p {
+    margin: 10px 0;
+}
+
+a {
+    color: #1e7e34;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #1e7e34;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #145a24;
+}
+    
+
+
+/* Estilo para enlaces que deben parecer botones */
+a.boton-enlace {
+    display: inline-block;
+    background-color: #1e7e34; /* Color de fondo verde oscuro */
+    color: #fff; /* Color del texto blanco */
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.boton-enlace:hover {
+    background-color: #145a24; /* Verde más oscuro al pasar el cursor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
+}

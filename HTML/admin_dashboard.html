@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Administrador</title>
+    <link rel="stylesheet" href="CSS/admin_dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="admin-header">
+            <div class="admin-logo">
+                <img src="imagenes/usuario.png" alt="User Logo" width="50" height="50">
+            </div>
+            <div class="admin-name">
+                <h2>Administrador</h2>
+            </div>
+            <button class="menu-button" onclick="toggleSidebar()">☰</button>
+            <a href="pag_principal.html"><img src="imagenes/puerta.png" alt="" width="30" height="30"></a>
+        </div>
+    </header>
+    
+    <div class="admin-container">
+        <div class="sidebar" id="sidebar"> <br>
+            <a href="#inicio" onclick="showSection('inicio')">Inicio</a>
+            <a href="#usuarios" onclick="showSection('usuarios')">Crud Usuarios</a>
+            <a href="#productos" onclick="showSection('productos')">Crud Productos</a>
+            <a href="#pedidos" onclick="showSection('pedidos')">Crud pedidos</a>
+            <a href="#rol" onclick="showSection('rol')">Crud Roles</a>
+            <a href="#ciudad" onclick="showSection('ciudad')">Crud Ciudad</a>
+            <a href="#departamento" onclick="showSection('departamento')">Crud Departamento</a>
+            <a href="#marcas" onclick="showSection('marcas')">Crud Marcas</a>
+        </div>
+
+        <main id="main-content">
+            <div id="inicio" class="section active">
+                <h1><span class="color">Bienvenido al Dashboard del Administrador</span></h1>
+                <div class="dashboard-grid">
+                    <div class="dashboard-card" onclick="showSection('usuarios')">
+                        <h3>Registrar Usuarios</h3>
+                    </div>
+                    <div class="dashboard-card_1" onclick="showSection('productos')">
+                        <h3>Registrar Productos</h3>
+                    </div>
+                    <div class="dashboard-card_2" onclick="showSection('pedidos')">
+                        <h3>Registrar Pedidos</h3>
+                    </div>
+                    <div class="dashboard-card_3" onclick="showSection('rol')">
+                        <h3>Registrar Roles</h3>
+                    </div>
+                    <div class="dashboard-card_4" onclick="showSection('ciudad')">
+                        <h3>Registrar Ciudad</h3>
+                    </div>
+                    <div class="dashboard-card_5" onclick="showSection('departamento')">
+                        <h3>Registrar Departamento</h3>
+                    </div>
+                    <div class="dashboard-card_6" onclick="showSection('departamento')">
+                        <h3>Registrar Marcas</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div id="productos" class="section crud-container">
+                <h1>Gestión de Productos</h1> 
+                <table class="crud-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="crud-table-body">
+                        <tr>
+                            <td>1</td>
+                            <td>Elemento 1</td>
+                            <td>
+                                <button onclick="editElement(1)">Editar</button>
+                                <button onclick="deleteElement(1)">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Elemento 2</td>
+                            <td>
+                                <button onclick="editElement(2)">Editar</button>
+                                <button onclick="deleteElement(2)">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="crud-actions">
+                    <button onclick="addElement()">Agregar Elemento</button>
+                </div>
+            </div>
+
+            <div id="usuarios" class="section crud-container">
+                <h1>Registros de Usuarios</h1>
+                <table class="crud-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre usuario</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="crud-table-body">
+                        <tr>
+                            <td>1</td>
+                            <td>Elemento 1</td>
+                            <td>
+                                <button onclick="editElement(1)">Editar</button>
+                                <button onclick="deleteElement(1)">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Elemento 2</td>
+                            <td>
+                                <button onclick="editElement(2)">Editar</button>
+                                <button onclick="deleteElement(2)">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="crud-actions">
+                    <button onclick="addElement()">Agregar Elemento</button>
+                </div>
+            </div>
+
+            <div id="pedidos" class="section crud-container">
+                <h1>Registros de Pedidos</h1>
+                <table class="crud-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre del pedido</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="crud-table-body">
+                        <tr>
+                            <td>1</td>
+                            <td>Elemento 1</td>
+                            <td>
+                                <button onclick="editElement(1)">Editar</button>
+                                <button onclick="deleteElement(1)">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Elemento 2</td>
+                            <td>
+                                <button onclick="editElement(2)">Editar</button>
+                                <button onclick="deleteElement(2)">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="crud-actions">
+                    <button onclick="addElement()">Agregar Elemento</button>
+                </div>
+            </div>
+
+            <div id="rol" class="section crud-container">
+                <h1>Registros de Roles</h1>
+                <form class="registration-form">
+                    <label for="rol-dato1">Dato 1:</label>
+                    <input type="text" id="rol-dato1" name="rol-dato1" required>
+
+                    <label for="rol-dato2">Dato 2:</label>
+                    <input type="text" id="rol-dato2" name="rol-dato2" required>
+
+                    <label for="rol-dato3">Dato 3:</label>
+                    <input type="text" id="rol-dato3" name="rol-dato3" required>
+
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+
+            <div id="ciudad" class="section crud-container">
+                <h1>Gestión de Ciudad</h1>
+                <form class="registration-form">
+                    <label for="ciudad-dato1">Dato 1:</label>
+                    <input type="text" id="ciudad-dato1" name="ciudad-dato1" required>
+
+                    <label for="ciudad-dato2">Dato 2:</label>
+                    <input type="text" id="ciudad-dato2" name="ciudad-dato2" required>
+
+                    <label for="ciudad-dato3">Dato 3:</label>
+                    <input type="text" id="ciudad-dato3" name="ciudad-dato3" required>
+
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+
+            <div id="departamento" class="section crud-container">
+                <h1>Gestión de Departamento</h1>
+                <form class="registration-form">
+                    <label for="departamento-dato1">Dato 1:</label>
+                    <input type="text" id="departamento-dato1" name="departamento-dato1" required>
+
+                    <label for="departamento-dato2">Dato 2:</label>
+                    <input type="text" id="departamento-dato2" name="departamento-dato2" required>
+
+                    <label for="departamento-dato3">Dato 3:</label>
+                    <input type="text" id="departamento-dato3" name="departamento-dato3" required>
+
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+
+            <div id="marcas" class="section crud-container">
+                <h1>Gestión de Marcas</h1>
+                <form class="registration-form">
+                    <label for="marcas-dato1">Dato 1:</label>
+                    <input type="text" id="marcas-dato1" name="marcas-dato1" required>
+
+                    <label for="marcas-dato2">Dato 2:</label>
+                    <input type="text" id="marcas-dato2" name="marcas-dato2" required>
+
+                    <label for="marcas-dato3">Dato 3:</label>
+                    <input type="text" id="marcas-dato3" name="marcas-dato3" required>
+
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="JS/admin.js"></script>
+</body>
+</html>
