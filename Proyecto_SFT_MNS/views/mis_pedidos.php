@@ -125,7 +125,7 @@ if ($numero_pedido) {
             <p>&copy; 2024 Shopping Footwear Tenis MNS. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src="../js/pag_principal1.js"></script>
+    <script src="../js/pag_principal_cliente.js"></script>
     <?php if (isset($_GET['message'])): ?>
         <script>
             alert("<?php echo htmlspecialchars($_GET['message']); ?>");
