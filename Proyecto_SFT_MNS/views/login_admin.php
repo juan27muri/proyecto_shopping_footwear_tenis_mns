@@ -5,7 +5,7 @@ require_once '../config/database.php'; // Ruta correcta
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $identificacion = $_POST['identificacion'] ?? '';
-    $password = $_POST['password'] ?? '';
+    $password = $_POST['password'] ?? ''; //prueba para saber si se guardan los cambios en el github xdxdxd
 
     // Consulta para obtener el administrador por identificación usando PDO
     $stmt = $base->prepare("SELECT * FROM usuarios WHERE id_usuario = :id_usuario");
