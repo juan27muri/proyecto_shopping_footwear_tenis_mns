@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $error = 'Identificación o contraseña incorrectos';
         }
     } else {
-        $error = 'Identificación o contraseña incorrectos';
+        $error = 'Identificación o contraseña incorrectos siiiii';
     }
 }
 ?>
