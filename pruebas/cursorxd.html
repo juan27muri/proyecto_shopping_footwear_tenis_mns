@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursor Serpiente</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .cursor-follower {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const trailLength = 300; // Cantidad de puntos
+    const followers = [];
+
+    // Crear los puntos y agregarlos al DOM
+    for (let i = 0; i < trailLength; i++) {
+      const follower = document.createElement('div');
+      follower.classList.add('cursor-follower');
+      document.body.appendChild(follower);
+      followers.push(follower);
+    }
+
+    const positions = Array(trailLength).fill({ x: 0, y: 0 }); // Inicializar posiciones
+
+    document.addEventListener('mousemove', (e) => {
+      positions.push({ x: e.pageX, y: e.pageY });
+      positions.shift(); // Mantener el tamaño del array
+    });
+
+    function animateFollowers() {
+      followers.forEach((follower, index) => {
+        const { x, y } = positions[index];
+        follower.style.transform = `translate(${x - 5}px, ${y - 5}px)`;
+      });
+      requestAnimationFrame(animateFollowers);
+    }
+
+    animateFollowers();
+  </script>
+</body>
+</html>
